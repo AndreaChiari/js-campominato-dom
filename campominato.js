@@ -18,13 +18,11 @@ let score = 0
 // creo una function che mi permettta di generare numeri casuali UNICI
 
 
-const getRandomNumbers = (blacklist) =>{
-    let randomNumbers;
-    do{
-        randomNumbers = Math.floor(Math.random() * totalcells) + 1;
-    }while(blacklist.includes(randomNumbers))
-    console.log(randomNumbers)
-    return randomNumbers;
+const getRandomNumbers = () =>{
+
+  const randomic =  Math.floor(Math.random() * 100) + 1;
+  return randomic;
+  
 }
 
  for(i=1; i <= 16; i++ ){
