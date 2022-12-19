@@ -13,6 +13,8 @@ const grid = document.getElementById('grid-container');
 const rows = 10
 const col = 10
 const totalcells = (rows * col)+1;
+let score = 0
+
 
 // aggiungo un event listener per generare le caselle al click
 button.addEventListener('click', function(){
@@ -26,10 +28,12 @@ button.addEventListener('click', function(){
 // aggiungo un altro event listener per cambiare il colore delle caselle
         cell.addEventListener('click',function(){
             cell.classList.add('click-azure')
-            console.log(cell.innerText)
-        })
+            score += 1
+            cell.classList.add('click-stop')
+            console.log(cell.innerText,score)
+        },{once : true})
         }
-    })
+    },{once : true})
 
 
 

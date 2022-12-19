@@ -51,3 +51,7 @@ u{
 .click-azure{
     background-color: aqua;
 }
+
+.click-stop{
+    cursor:not-allowed;
+}
