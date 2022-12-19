@@ -1,0 +1,53 @@
+h1{
+    color: darkblue;
+}
+
+button{
+    padding: 1px 30px;
+}
+
+.h100{
+    min-height: 100px;
+}
+
+header{
+    background-image: url(minefield.png);
+    background-size: contain;
+}
+
+main{
+    min-height: 500px;
+    background-color: rgb(127,255,212);
+}
+
+footer{
+    min-height: 100px;
+}
+
+u{
+    color: blueviolet;
+}
+
+/* grid */
+
+#grid-container{
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.grid-cell{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.click-azure{
+    background-color: aqua;
+}
