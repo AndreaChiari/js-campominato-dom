@@ -12,15 +12,15 @@ let button = document.querySelector('button');
 const grid = document.getElementById('grid-container');
 const rows = 10
 const col = 10
-const totalcells = (rows * col)+1;
+const totalcells = (rows * col);
 let score = 0
 
 // creo una function che mi permettta di generare numeri casuali UNICI
 
 let blacklist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-const getRandomNumbers = (min = 1, max = 16, blacklist) =>{
-    let randomicNumbers = Math.floor(Math.random() * (max + 1 - min)) + min;
-    while (blacklist.includes(randomicNumbers)){;
+const getRandomNumbers = ( blacklist) =>{
+    let randomicNumbers = Math.floor(Math.random() * 16) + 1;
+    while (blacklist.includes (randomicNumbers)){;
     console.log(randomicNumbers);
    return randomicNumbers;
    }
@@ -34,7 +34,7 @@ const getRandomNumbers = (min = 1, max = 16, blacklist) =>{
 // aggiungo un event listener per generare le caselle al click
 button.addEventListener('click', function(){
    
-   for(i=1; i < totalcells; i++ ){
+   for(i=1; i <= totalcells; i++ ){
        let cell = document.createElement('div');
        cell.innerHTML = i
        grid.appendChild(cell);
