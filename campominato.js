@@ -17,18 +17,16 @@ let score = 0
 
 // creo una function che mi permettta di generare numeri casuali UNICI
 
-let blacklist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-const getRandomNumbers = ( blacklist) =>{
-    let randomicNumbers = Math.floor(Math.random() * 16) + 1;
-    while (blacklist.includes (randomicNumbers)){;
-    console.log(randomicNumbers);
-   return randomicNumbers;
-   }
- }
+
+const getRandomNumbers = () =>{
+    const randomNumbers = Math.floor(Math.random() * totalcells) + 1;
+    return randomNumbers;
+}
 
  for(i=1; i <= 16; i++ ){
 
      getRandomNumbers()
+     console.log(getRandomNumbers)
  }
 
 // aggiungo un event listener per generare le caselle al click
